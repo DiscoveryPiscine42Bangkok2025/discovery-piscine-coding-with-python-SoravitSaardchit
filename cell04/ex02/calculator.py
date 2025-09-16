@@ -1,0 +1,7 @@
+i = input("Give me the first number:  ")
+j = input("Give me the second number:  ")
+print("Thank you!")
+print(f"{i} + {j} = {int(i)+int(j)}")
+print(f"{i} - {j} = {int(i)-int(j)}")
+print(f"{i} / {j} = {int(i)//int(j)}")
+print(f"{i} * {j} = {int(i)*int(j)}")
