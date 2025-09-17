@@ -1,8 +1,8 @@
-s = input("")  
-words = s.split() 
-if s == " ":
- print("none")
+s = input()
+if not s.strip():
+    print("none")
 else:
-  print(f"parameters: {len(words)}")
-  for i in words:
-    print(f"{i} : {len(i)}")
+    words = [w.strip('"\'') for w in s.split()]  
+    print(f"parameters: {len(words)}")
+    for w in words:
+        print(f"{w} : {len(w)}")
