@@ -1,10 +1,7 @@
-a = input(" ")
-if a == " ":
-  print("none")
+s = input().strip()        
+if not s:
+    print("none")
 else:
-  for i in a.split() :
-    if not i.endswith("ism"):
-        i = i+"ism"
-        print(i)
-    else:
-      continue
+    for w in s.split():
+        if not w.endswith("ism"):
+            print(w + "ism")
