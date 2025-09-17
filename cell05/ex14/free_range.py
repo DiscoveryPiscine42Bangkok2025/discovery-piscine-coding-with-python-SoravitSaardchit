@@ -1,7 +1,15 @@
-a = input(" ")
-b = input(" ")
-if a.strip() == "" or b.strip() == "":
+a = input().strip()
+b = input().strip()
+if not a or not b:
     print("none")
 else:
-  words = range(int(a),int(b)+1)
-  print(list(words))
+    try:
+        start = int(a)
+        end = int(b)
+    except ValueError:
+        print("none")
+    else:
+        if start > end:
+            print("none")
+        else:
+            print(list(range(start, end + 1)))
