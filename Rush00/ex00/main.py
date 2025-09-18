@@ -17,7 +17,7 @@ R...
 
     board3 = """\
 ..
-.k\
+Kk\
 """
     checkmate(board3)
 
