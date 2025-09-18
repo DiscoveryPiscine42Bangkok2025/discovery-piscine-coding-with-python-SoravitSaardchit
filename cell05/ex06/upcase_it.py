@@ -1,7 +1,20 @@
-s = input("")  
-words = s.split()   
-if s == " ":
- print("none")
+import shlex
+def read_line():
+    try:
+        return input().strip()
+    except EOFError:
+        return ""
+
+line = read_line()
+if not line:
+    print("none")
 else:
-  for a in words:
-    print(a.upper(),end = " ")
+    if '"' in line or "'" in line:
+        try:
+            parts = shlex.split(line)
+        except ValueError:
+            parts = []
+        first = parts[0] if parts else line
+    else:
+        first = line
+    print(first.upper())
