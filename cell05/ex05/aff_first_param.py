@@ -1,6 +1,13 @@
-s = input("")  
-words = s.split()   
-if s == " ":
- print("none")
+import shlex
+s = input().strip()
+if not s:
+    print("none")
 else:
-  print(words[0])
+    try:
+        parts = shlex.split(s)   
+    except ValueError:
+        parts = s.split()     
+    if not parts:
+        print("none")
+    else:
+        print(parts[0])
